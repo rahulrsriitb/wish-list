@@ -19,7 +19,7 @@ jobs:
     steps:
 
       - name: Apply Changes
-        uses: ServiceNow/sncicd-apply-changes@1.0 # like username/repo-name
+        uses: ServiceNow/sncicd-apply-changes@1.0.0 # like username/repo-name
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}
