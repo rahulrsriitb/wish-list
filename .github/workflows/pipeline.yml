@@ -18,13 +18,14 @@ jobs:
 
     steps:
 
-      - name: ServiceNow CI/CD Apply Changes
-        uses: ServiceNow/sncicd-apply-changes@2.0.0
+      - name: Apply Changes
+        uses: ServiceNow/sncicd-apply-changes@1.0 # like username/repo-name
         env:
-          snowUsername: ${{ secrets.SN_USERNAME }}
-          snowPassword: ${{ secrets.SN_PASSWORD }}
-          snowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
-          appSysID: ${{ secrets.SN_APP_SYSID }}
+          snowUsername: ${{ secrets.SNOW_USERNAME }}
+          snowPassword: ${{ secrets.SNOW_PASSWORD }}
+          snowSourceInstance: ${{ secrets.SNOW_SOURCE_INSTANCE }}
+          appSysID: ${{ secrets.APP_SYS_ID }}
+          
 
       - name: ServiceNow CI/CD Publish App
         id: publish_app
